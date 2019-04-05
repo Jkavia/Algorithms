@@ -5,6 +5,8 @@ public class NonBST {
 	public static void main(String[] args) {
 System.out.println("HEllo");
 	}
+	
+	public void addnode() {}
 
 }
 
@@ -26,4 +28,5 @@ class Treenode{
 		value = val;
 		left=right=null;
 	}
+	
 }
