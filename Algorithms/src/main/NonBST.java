@@ -13,8 +13,11 @@ public class NonBST {
 		addnode(root, 5);
 		addnode(root, 6);
 		addnode(root, 7);
-
-		printTree(root);
+		addnode(root, 8);
+		
+		
+		//printTree(root);
+		//System.out.println("val is "+commonancestor(root,8,5).value);
 
 	}
 
@@ -47,7 +50,7 @@ public class NonBST {
 
 		if (rx.node != null && ry.node != null) {
 			return new Result(root, true);
-		} else if (rx.node == root || ry.node == root) {
+		} else if (p== root.value || q== root.value) {
 			boolean isAncestor = rx.node != null || ry.node != null;
 			return new Result(root, isAncestor);
 		} else {
@@ -88,8 +91,18 @@ public class NonBST {
 			return;
 		}
 		printTree(root.left);
-		System.out.println(root.value);
+		System.out.print(root.value+" ");
 		printTree(root.right);
+	}
+	
+	/** Print the tree in post order **/
+	public static void printTreepost(Treenode root) {
+		if (root == null) {
+			return;
+		}
+		printTree(root.left);
+		printTree(root.right);
+		System.out.print(root.value+" ");
 	}
 
 }
