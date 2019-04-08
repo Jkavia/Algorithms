@@ -53,13 +53,13 @@ public class NonBST {
 	 **/
 		public static boolean isSubtree(Treenode tree1, Treenode tree2) {
 			if(tree2==null)return true;
-			return matchingIfnotnull(tree1,tree2);
+			return checkAllNodesOfBiggerTree(tree1,tree2);
 		}
 	
-	private static boolean matchingIfnotnull(Treenode tree1, Treenode tree2) {
+	private static boolean checkAllNodesOfBiggerTree(Treenode tree1, Treenode tree2) {
 		if(tree1==null) {return false;}
 		if(tree1.value==tree2.value &&comparesimilarnode(tree1,tree2)) {return true; }
-		return matchingIfnotnull(tree1.left,tree2)||matchingIfnotnull(tree1.right,tree2);
+		return checkAllNodesOfBiggerTree(tree1.left,tree2)||checkAllNodesOfBiggerTree(tree1.right,tree2);
 	}
 
 	private static boolean comparesimilarnode(Treenode tree1, Treenode tree2) {
