@@ -21,26 +21,56 @@ public class NonBST {
 		// System.out.println("val is "+commonancestor(root,8,5).value);
 
 	}
-	
-	/**Given two trees find if one tree is a subtree of another one O(n+m) space complexity**/
+
+	/**
+	 * Given two trees find if one tree is a subtree of another one O(n+m) space
+	 * complexity
+	 **/
 	public static boolean isSubTree(Treenode node1, Treenode node2) {
 		StringBuffer sb1 = new StringBuffer();
 		StringBuffer sb2 = new StringBuffer();
-		
+
 		findStringpath(node1, sb1);
 		findStringpath(node2, sb2);
-		
-		return sb1.indexOf(sb2.toString()) !=-1;
-			
+
+		return sb1.indexOf(sb2.toString()) != -1;
+
 	}
+
 	private static void findStringpath(Treenode node, StringBuffer sb) {
-	if(node==null) {
-		sb.append("X");
-		return;
+		if (node == null) {
+			sb.append("X");
+			return;
+		}
+		sb.append(node.value + "");
+		findStringpath(node.left, sb);
+		findStringpath(node.right, sb);
 	}
-	sb.append(node.value+"");
-	findStringpath(node.left,sb);
-	findStringpath(node.right,sb);
+
+	/**
+	 * Given two trees find if one tree is a subtree of another one constant space
+	 * complexity
+	 **/
+		public static boolean isSubtree(Treenode tree1, Treenode tree2) {
+			if(tree2==null)return true;
+			return matchingIfnotnull(tree1,tree2);
+		}
+	
+	private static boolean matchingIfnotnull(Treenode tree1, Treenode tree2) {
+		if(tree1==null) {return false;}
+		if(tree1.value==tree2.value &&comparesimilarnode(tree1,tree2)) {return true; }
+		return matchingIfnotnull(tree1.left,tree2)||matchingIfnotnull(tree1.right,tree2);
+	}
+
+	private static boolean comparesimilarnode(Treenode tree1, Treenode tree2) {
+		if(tree1==null && tree2==null) {return true;}
+		else if(tree1==null || tree2==null) {return false;}
+		else if(tree1.value!=tree2.value) {return false;}
+		else {
+
+			return comparesimilarnode(tree1.left, tree2.left)&&comparesimilarnode(tree1.right, tree2.right);
+		}
+		
 	}
 
 	/** given a binary tree print all possible arrays that have led to this tree **/
@@ -68,29 +98,28 @@ public class NonBST {
 
 	}
 
-	private static void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second, ArrayList<LinkedList<Integer>> results,
-			LinkedList<Integer> prefix) {
-	if(first.size()==0||second.size()==0) {
-		LinkedList<Integer> result = (LinkedList<Integer>)prefix.clone();
-		result.addAll(first);
-		result.addAll(second);
-		results.add(result);
-		return;
-	}
-		
-	
-	int headFirst = first.removeFirst();
-	prefix.addLast(headFirst);
-	weaveLists(first, second, results, prefix);
-	prefix.removeLast();
-	first.addFirst(headFirst);
-	
-	int headSecond = second.removeFirst();
-	prefix.addLast(headSecond);
-	weaveLists(first, second, results, prefix);
-	prefix.removeLast();
-	second.addFirst(headSecond);
-	
+	private static void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second,
+			ArrayList<LinkedList<Integer>> results, LinkedList<Integer> prefix) {
+		if (first.size() == 0 || second.size() == 0) {
+			LinkedList<Integer> result = (LinkedList<Integer>) prefix.clone();
+			result.addAll(first);
+			result.addAll(second);
+			results.add(result);
+			return;
+		}
+
+		int headFirst = first.removeFirst();
+		prefix.addLast(headFirst);
+		weaveLists(first, second, results, prefix);
+		prefix.removeLast();
+		first.addFirst(headFirst);
+
+		int headSecond = second.removeFirst();
+		prefix.addLast(headSecond);
+		weaveLists(first, second, results, prefix);
+		prefix.removeLast();
+		second.addFirst(headSecond);
+
 	}
 
 	/** find the first common ancestor **/
