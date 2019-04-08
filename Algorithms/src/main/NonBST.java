@@ -16,13 +16,35 @@ public class NonBST {
 		addnode(root, 7);
 		addnode(root, 8);
 
+		allSequences(root);
 		// printTree(root);
 		// System.out.println("val is "+commonancestor(root,8,5).value);
 
 	}
+	
+	/**Given two trees find if one tree is a subtree of another one O(n+m) space complexity**/
+	public static boolean isSubTree(Treenode node1, Treenode node2) {
+		StringBuffer sb1 = new StringBuffer();
+		StringBuffer sb2 = new StringBuffer();
+		
+		findStringpath(node1, sb1);
+		findStringpath(node2, sb2);
+		
+		return sb1.indexOf(sb2.toString()) !=-1;
+			
+	}
+	private static void findStringpath(Treenode node, StringBuffer sb) {
+	if(node==null) {
+		sb.append("X");
+		return;
+	}
+	sb.append(node.value+"");
+	findStringpath(node.left,sb);
+	findStringpath(node.right,sb);
+	}
 
 	/** given a binary tree print all possible arrays that have led to this tree **/
-	ArrayList<LinkedList<Integer>> allSequences(Treenode node) {
+	public static ArrayList<LinkedList<Integer>> allSequences(Treenode node) {
 		ArrayList<LinkedList<Integer>> result = new ArrayList<LinkedList<Integer>>();
 		if (node == null) {
 			result.add(new LinkedList<Integer>());
@@ -46,7 +68,7 @@ public class NonBST {
 
 	}
 
-	private void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second, ArrayList<LinkedList<Integer>> results,
+	private static void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second, ArrayList<LinkedList<Integer>> results,
 			LinkedList<Integer> prefix) {
 	if(first.size()==0||second.size()==0) {
 		LinkedList<Integer> result = (LinkedList<Integer>)prefix.clone();
