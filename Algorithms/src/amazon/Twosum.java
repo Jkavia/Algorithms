@@ -19,6 +19,7 @@ public class Twosum {
 	}
 	}
 	
+	/**Algorithm to add two numbers represented by linkedlist*/
 	public static Listnode twosum(Listnode root1, Listnode root2) {
 		Listnode rootreturn=new Listnode(0), root;
 		root=rootreturn;
