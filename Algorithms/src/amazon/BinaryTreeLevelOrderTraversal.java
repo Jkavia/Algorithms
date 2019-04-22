@@ -6,15 +6,6 @@ public class BinaryTreeLevelOrderTraversal {
 
 	public static void main(String[] args) {
 		
-		//List<List<Integer>> response = LevelOrderTraversal(root);
-		
-//		for(List l:response) {
-//			for(Integer i: (List<Integer>)l) {
-//				System.out.print(i+" ");
-//			}
-//			System.out.println();
-//			
-//		}
 	}
 	public TreeNode addVals(int[]arr) {
 		
