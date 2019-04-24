@@ -44,7 +44,7 @@ class Randomize{
 	}
 	
 	public int getRandom() {
-		int randomindex = (int)Math.random()*(list.size()-1);
+		int randomindex = (int)(Math.random()*(list.size()));
 		int key = list.get(randomindex);
 		return map.get(key);
 	}
