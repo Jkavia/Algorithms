@@ -65,7 +65,7 @@ class Listnode{
 	int value;
 	Listnode next;
 	
-	public Listnode(int input) {
+	public Listnode(int input){
 		value=input;
 		next=null;
 	}
