@@ -1,5 +1,6 @@
 package amazon;
 
+
 public class LowestCommonAncestor {
 
 	public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class LowestCommonAncestor {
 		root.left.right.right = new TreenodeLCA(4);
 		root.right.left = new TreenodeLCA(0);
 		root.right.right = new TreenodeLCA(8);
+	
 		
 	TreenodeLCA lca = findlowestCommonAncestor(root,root.left,root.left.right.right);
 	System.out.println(lca.val);
