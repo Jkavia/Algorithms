@@ -19,17 +19,16 @@ public class ReverseLinkedList {
 		if(head==null) {
 			return null;
 		}else if(head.next==null) {return head;}
-		Listnode prev=head,curr=head.next,next=head.next.next;
-		prev.next=null;
-		while(next!=null) {
-			curr.next=prev;
-			prev=curr;
-			curr=next;
-			next=next.next;
-		}
-		curr.next=prev;
 		
-		return curr;
+		Listnode newHead = null;
+		while(head!=null) {
+			Listnode next= head.next;
+			head.next = newHead;
+			newHead=head;
+			head=next;
+		}
+		
+		return newHead;
 	
 	}
 
