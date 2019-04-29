@@ -11,6 +11,7 @@ public class Findpermutationsofarray {
 			for(Integer in:lis) {
 				System.out.print(in+" ");
 			}
+			System.out.println();
 		}
 		
 	}
