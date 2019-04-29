@@ -24,7 +24,7 @@ public class Subsets {
 			
 			return retlist;
 	}
-
+	//(n for stack)*(2^n fr output) subsets if we include , time is (n*2^n)
 	private static void recursesubsets(List<List<Integer>> retlist, Stack<Integer> stack, int position,int[] arr) {
 			if(arr.length==position) {
 				List<Integer> list = new ArrayList<>(stack);
