@@ -23,5 +23,10 @@ public class AddDigits {
 			digit=newdig+subval;
 		}
 		return digit;
+		
+	/***
+	 * O(1) solution
+	 * return (num%9==0)?1:num%9;
+	 * */
 	}
 }
