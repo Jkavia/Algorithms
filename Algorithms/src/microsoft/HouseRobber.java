@@ -27,7 +27,7 @@ public class HouseRobber {
 		for (int i = 2; i < housesamout.length; i++) {
 			dp[i] = Math.max(dp[i - 1], dp[i - 2] + housesamout[i]);
 		}
-		return dp[housesamout.length - 1];
+		return  dp[housesamout.length - 1];
 	}
 
 }
