@@ -4,7 +4,7 @@ public class HouseRobber {
 
 	public static void main(String[] args) {
 		// find max robbery amount if he cant rob two adjacent houses.
-		int[] housesamout = { 1, 2, 3, 1, 1, 1, 9 };
+		int[] housesamout = { 1, 2, 3, 1, 5, 1, 9 };
 		int max = findTheMaxProfit(housesamout);
 		System.out.println(max);
 	}
@@ -25,9 +25,9 @@ public class HouseRobber {
 		dp[1] = Math.max(housesamout[0], housesamout[1]);
 
 		for (int i = 2; i < housesamout.length; i++) {
-			dp[i] = Math.max(dp[i - 1], dp[i - 2] +  housesamout[i]);
+			dp[i] = Math.max(dp[i - 1], dp[i - 2] + housesamout[i]);
 		}
-		return  dp[housesamout.length - 1];
+		return dp[housesamout.length - 1];
 	}
 
 }
