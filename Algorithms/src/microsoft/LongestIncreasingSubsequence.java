@@ -16,7 +16,6 @@ public class LongestIncreasingSubsequence {
 	private static List<Integer> oplongestIncreasingSubsequence(int[] input) {
 		
 		List<Integer> op = new ArrayList<>();
-		
 		return op;
 		
 	}
