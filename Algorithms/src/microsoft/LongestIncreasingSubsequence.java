@@ -16,25 +16,25 @@ public class LongestIncreasingSubsequence {
 	}
 
 	private static int oplongestIncreasingSubsequence(int[] input) {
-		int max=0,firstindex=0,lastindex=0;
+		int max=0;
+		int[] dp= new int[input.length];
 		
 		for(int i=0;i<input.length;i++) {
-			if(i>0) {
-				System.out.println(i);
-				if(input[i]>input[i-1]) {
-					
-					lastindex =i;
-				}else {
-					
-					int currentlength = (lastindex-firstindex)+1;
-					System.out.println(currentlength);
-					if(currentlength>max) {
-						max=currentlength;
-					}
-					firstindex=i;
-					lastindex=i;
+			dp[i]=1;
+		}
+		
+		for(int i=1;i<input.length;i++) {
+			int currmax=0;
+			
+			for(int j=0;j<i;j++) {
+				
+				if(input[i]>input[j]) {
+					currmax=Math.max(currmax, dp[j]);
 				}
+				
 			}
+			dp[i]=currmax+1;
+			max = Math.max(max, dp[i]);
 			
 		}
 		
