@@ -6,6 +6,13 @@ public class Findpermutationsofarray {
 	public static void main(String[] args) {
 		int[] arr = {1,2,3};
 		List<List<Integer>> re=permutations(arr);
+		
+		for(List<Integer> lis: re) {
+			for(Integer in:lis) {
+				System.out.print(in+" ");
+			}
+		}
+		
 	}
 
 	private static List<List<Integer>> permutations(int[] arr) {
