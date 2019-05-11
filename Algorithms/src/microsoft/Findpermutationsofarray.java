@@ -37,8 +37,9 @@ public class Findpermutationsofarray {
 	}
 
 	private static void swap(int[] arr, int a, int i) {
-		// TODO Auto-generated method stub
-		
+	int temp = arr[a];
+	arr[a] = arr[i];
+	arr[i]=temp;
 	}
 
 }
