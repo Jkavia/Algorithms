@@ -28,7 +28,7 @@ public class Findpermutationsofarray {
 		
 		for(int a=i;a<arr.length;a++) {
 			swap(arr,a,i);
-			
+			recursivepermute(retlist, arr, i+1);
 			//deswap
 			swap(arr,a,i);
 			
