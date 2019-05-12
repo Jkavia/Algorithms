@@ -27,8 +27,17 @@ public class Findpermutationsofarray {
 		}
 		
 		for(int a=i;a<arr.length;a++) {
+			swap(arr,a,i);
+			
+			//deswap
+			swap(arr,a,i);
 			
 		}
+		
+	}
+
+	private static void swap(int[] arr, int a, int i) {
+		// TODO Auto-generated method stub
 		
 	}
 
