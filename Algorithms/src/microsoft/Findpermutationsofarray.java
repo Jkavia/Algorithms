@@ -26,6 +26,10 @@ public class Findpermutationsofarray {
 			retlist.add(inner);
 		}
 		
+		for(int a=i;a<arr.length;a++) {
+			
+		}
+		
 	}
 
 }
