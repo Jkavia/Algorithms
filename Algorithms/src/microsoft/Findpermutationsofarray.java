@@ -18,7 +18,13 @@ public class Findpermutationsofarray {
 	}
 
 	private static void recursivepermute(List<List<Integer>> retlist, int[] arr, int i) {
-		// TODO Auto-generated method stub
+		if(i==arr.length-1) {
+			List<Integer> inner = new ArrayList<>();
+			for(int x: arr) {
+				inner.add(x);
+			}
+			retlist.add(inner);
+		}
 		
 	}
 
