@@ -12,12 +12,12 @@ public class Findpermutationsofarray {
 		List<List<Integer>> retlist = new ArrayList<>();
 		if(arr==null || arr.length==0) {return null;}
 		
-		recursepermute(retlist, arr, 0);
+		recursivepermute(retlist, arr, 0);
 		
 		return retlist;
 	}
 
-	private static void recursepermute(List<List<Integer>> retlist, int[] arr, int i) {
+	private static void recursivepermute(List<List<Integer>> retlist, int[] arr, int i) {
 		// TODO Auto-generated method stub
 		
 	}
