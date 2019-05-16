@@ -11,7 +11,15 @@ public class Findpermutationsofarray {
 	private static List<List<Integer>> permutations(int[] arr) {
 		List<List<Integer>> retlist = new ArrayList<>();
 		if(arr==null || arr.length==0) {return null;}
+		
+		recursepermute(retlist, arr, 0);
+		
 		return retlist;
+	}
+
+	private static void recursepermute(List<List<Integer>> retlist, int[] arr, int i) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
