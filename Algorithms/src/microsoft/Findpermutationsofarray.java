@@ -9,8 +9,9 @@ public class Findpermutationsofarray {
 	}
 
 	private static List<List<Integer>> permutations(int[] arr) {
+		List<List<Integer>> retlist = new ArrayList<>();
 		if(arr==null || arr.length==0) {return null;}
-		return null;
+		return retlist;
 	}
 
 }
