@@ -12,11 +12,12 @@ public class Reversestring {
 	private static String reverse(String input) {
 	if(input ==null || input.isEmpty()) {return null;}
 	String ret = "";
-	String[] strarr = input.split(" ");
+	String[] strarr = input.trim().split("//s");
 	
-	for(int i= strarr.length-1;i>=0;i--) {
-		ret+=" "+strarr[i];
+	for(int i= strarr.length-1;i>0;i--) {
+		ret+=strarr[i]+" ";
 	}
+	ret+=strarr[0];
 		return ret;
 	}
 
