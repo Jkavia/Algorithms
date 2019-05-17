@@ -1,10 +1,16 @@
 package microsoft;
+import java.util.*;
 
 public class Findpermutationsofarray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int[] arr = {1,2,3};
+		List<List<Integer>> re=permutations(arr);
+	}
 
+	private static List<List<Integer>> permutations(int[] arr) {
+		if(arr==null || arr.length==0) {return null;}
+		return null;
 	}
 
 }
