@@ -1,5 +1,7 @@
 package microsoft;
 
+import java.util.List;
+
 public class SpiralMatrix {
 
 	public static void main(String[] args) {
@@ -7,6 +9,11 @@ public class SpiralMatrix {
 	
 	List<Integer> ls = spiral(twodimmaxtrix);
 
+	}
+
+	private static List<Integer> spiral(int[][] twodimmaxtrix) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
