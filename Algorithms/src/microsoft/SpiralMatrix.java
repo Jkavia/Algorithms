@@ -1,5 +1,6 @@
 package microsoft;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SpiralMatrix {
@@ -12,8 +13,9 @@ public class SpiralMatrix {
 	}
 
 	private static List<Integer> spiral(int[][] twodimmaxtrix) {
-		// TODO Auto-generated method stub
-		return null;
+		if(twodimmaxtrix==null && twodimmaxtrix.length==0) {return null;}
+		List<Integer> retlist = new ArrayList<Integer>();
+		return retlist;
 	}
 
 }
