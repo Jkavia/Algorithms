@@ -27,7 +27,7 @@ public class ThreeSumSmaller {
 			while(j<k) {
 				System.out.println((input[i]+input[j]+input[k])<target);
 				if((input[i]+input[j]+input[k])<target) {
-					System.out.println(input[i]+" "+input[j]+" "+input[k]);
+					//System.out.println(input[i]+" "+input[j]+" "+input[k]);
 					retnumber+=k-j;//array is sorted so all number between j and k are smaller only
 					j++;
 					while(input[j]==input[j-1]) {j++;}
