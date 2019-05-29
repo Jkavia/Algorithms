@@ -37,7 +37,7 @@ public class ThreeSumSmaller {
 				}
 			}
 		}
-		//Syst
+		//S
 		return retnumber;
 	}
 
