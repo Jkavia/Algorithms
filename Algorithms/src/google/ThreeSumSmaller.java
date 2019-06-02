@@ -37,7 +37,7 @@ public class ThreeSumSmaller {
 				}
 			}
 		}
-		System.out.println(retnumber);
+		//System.out.println(retnumber);
 		return retnumber;
 	}
 
