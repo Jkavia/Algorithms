@@ -9,6 +9,7 @@ public class ThreeSumSmaller {
 		int target = 2;
 
 		int ser = findsmaller(input, target);
+		System.out.println(ser);
 	}
 
 	private static int findsmaller(int[] input, int target) {
