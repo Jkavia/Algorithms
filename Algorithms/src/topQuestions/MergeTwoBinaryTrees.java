@@ -22,7 +22,7 @@ public class MergeTwoBinaryTrees {
 		if (rootval == null)return ;
 		printtree(rootval.left);
 		System.out.println(rootval.val);
-		printtree(rootval.right);
+		printtree(rootval.right) ; 
 	}
 
 	private static TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
