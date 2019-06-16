@@ -19,7 +19,7 @@ public class MergeTwoBinaryTrees {
 	}
 
 	private static void printtree(TreeNode rootval) {
-		if (rootval == null)return;
+		if (rootval == null)return ;
 		printtree(rootval.left);
 		System.out.println(rootval.val);
 		printtree(rootval.right);
